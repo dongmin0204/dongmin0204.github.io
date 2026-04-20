@@ -31,7 +31,7 @@ const Experience = () => {
             const isLast = idx === sorted.length - 1
 
             return (
-              <div key={exp.id} className="relative flex gap-8 group">
+              <div key={exp.id} className="relative flex gap-4 md:gap-8 group">
                 {/* Timeline node */}
                 <div className="relative flex-shrink-0 flex flex-col items-center" style={{ width: '15px' }}>
                   <div

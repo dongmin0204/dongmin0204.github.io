@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './styles/globals.css'
 import Sidebar from './components/layout/Sidebar'
 import MobileNav from './components/layout/MobileNav'
@@ -14,6 +14,15 @@ const SIDEBAR_W = 288
 
 function App() {
   const [sidebarOpen, setSidebarOpen] = useState(true)
+  const [isDesktop, setIsDesktop] = useState(() => window.innerWidth >= 1024)
+
+  useEffect(() => {
+    const check = () => setIsDesktop(window.innerWidth >= 1024)
+    window.addEventListener('resize', check)
+    return () => window.removeEventListener('resize', check)
+  }, [])
+
+  const mainMarginLeft = isDesktop ? (sidebarOpen ? `${SIDEBAR_W}px` : '18px') : '0'
 
   return (
     <div className="flex min-h-screen" style={{ backgroundColor: 'var(--bg-base)' }}>
@@ -73,7 +82,7 @@ function App() {
       {/* Main content */}
       <main
         className="w-full transition-all duration-300"
-        style={{ marginLeft: sidebarOpen ? `${SIDEBAR_W}px` : '18px' }}
+        style={{ marginLeft: mainMarginLeft }}
       >
         <Hero />
         <About />
