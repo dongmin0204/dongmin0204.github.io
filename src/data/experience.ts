@@ -75,8 +75,8 @@ export const experiences: Experience[] = [
   },
   {
     id: 'gdsc',
-    year: '2024',
-    period: '2024',
+    year: '2025',
+    period: '2025',
     title: '멤버',
     organization: 'GDSC-DGU',
     description: 'Google Developer Student Clubs 동국대 지부 활동',
@@ -84,8 +84,8 @@ export const experiences: Experience[] = [
   },
   {
     id: 'gdgoc',
-    year: '2024',
-    period: '2024',
+    year: '2025',
+    period: '2025',
     title: 'Web/App 스터디',
     organization: 'GDGoC Dongguk',
     description: 'memoRise (단어장 앱) 개발',
