@@ -1,0 +1,93 @@
+@import "tailwindcss";
+
+:root {
+  /* ── Paper & Ink palette ─────────────────────────────── */
+  --bg-base:       #F5F4EF;   /* warm off-white */
+  --bg-surface:    #FFFFFF;   /* sidebar / elevated */
+  --bg-card:       #FFFFFF;   /* cards */
+  --bg-hover:      #EDECE5;   /* hover tint */
+  --text-primary:  #111111;   /* near-black ink */
+  --text-secondary:#5A5955;   /* warm mid-gray */
+  --text-muted:    #A09D94;   /* warm light gray */
+
+  /* Single bold accent — vermillion red */
+  --accent:        #E8380D;
+  --accent-light:  #FF5A35;
+  --accent-glow:   rgba(232, 56, 13, 0.07);
+  --accent-dark:   #B82800;
+
+  /* Secondary — deep indigo for pops of contrast */
+  --indigo:        #4F46E5;
+
+  --border:        #E2E0D8;
+  --border-accent: rgba(232, 56, 13, 0.28);
+
+  /* ── Legacy aliases so existing component vars still work */
+  --bg-primary:    var(--bg-base);
+  --bg-secondary:  var(--bg-card);
+  --cyan:          var(--accent);       /* remapped: red */
+  --purple:        var(--indigo);       /* remapped: indigo */
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background-color: var(--bg-base);
+  /* Faint ruled-line grid — editorial notebook feel */
+  background-image:
+    linear-gradient(rgba(0,0,0,0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,0,0,0.025) 1px, transparent 1px);
+  background-size: 48px 48px;
+  color: var(--text-primary);
+  font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont,
+    'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+  line-height: 1.75;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4 {
+  font-family: 'Pretendard Variable', Pretendard, sans-serif;
+  font-weight: 800;
+  line-height: 1.15;
+}
+
+code, pre {
+  font-family: 'JetBrains Mono', 'Fira Code', ui-monospace, monospace;
+}
+
+/* ── Card component ─────────────────────────────────────── */
+.grad-card {
+  background-color: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.2s ease;
+}
+.grad-card:hover {
+  border-color: var(--card-hover-color, var(--accent));
+  box-shadow:
+    0 0 0 1px color-mix(in srgb, var(--card-hover-color, var(--accent)) 12%, transparent),
+    0 8px 30px rgba(0, 0, 0, 0.08),
+    0 2px 8px rgba(0, 0, 0, 0.04);
+  transform: translateY(-2px);
+}
+
+/* ── Accent text ────────────────────────────────────────── */
+.accent-text {
+  color: var(--accent);
+}
+
+/* ── Scrollbar ──────────────────────────────────────────── */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg-base); }
+::-webkit-scrollbar-thumb { background: var(--border); border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: var(--accent); }
+
+/* ── Selection ──────────────────────────────────────────── */
+::selection { background: rgba(232, 56, 13, 0.12); color: var(--accent-dark); }
