@@ -7,7 +7,7 @@ import { experiences } from '../data/experience'
 // 보호하는 동작: UI가 의존하는 데이터 필드 계약이 항상 충족되어야 한다.
 // 누군가 데이터 파일을 수정할 때 이 테스트가 회귀를 잡는다.
 
-const VALID_PROJECT_CATEGORIES: Project['category'][] = ['ai-infra', 'fullstack', 'tool', 'hardware']
+const VALID_PROJECT_CATEGORIES: Project['category'][] = ['ai-infra', 'backend', 'frontend']
 const VALID_EXPERIENCE_TYPES = ['research', 'activity', 'education', 'hackathon'] as const
 const PROJECT_STRING_KEYS = ['id', 'title', 'category', 'summary', 'situation', 'task', 'insight', 'github'] as const
 const PROJECT_ARRAY_KEYS = ['action', 'result'] as const
