@@ -224,9 +224,9 @@ export const projects: Project[] = [
     id: 'aiot-cv',
     title: '로봇팔 Object Detection',
     category: 'ai-infra',
-    summary: '공학 페스티벌에서 로봇팔에 컴퓨터 비전을 적용한 하드웨어+AI 융합 프로젝트',
-    period: '2024 공학 페스티벌',
-    situation: '공학 페스티벌에서 소프트웨어와 하드웨어를 융합한 프로젝트를 진행. 로봇팔이 물체를 실시간으로 인식하고 잡는 기능이 필요했다.',
+    summary: 'AIoT 창의적 공학 설계에서 로봇팔에 컴퓨터 비전을 적용한 하드웨어+AI 융합 프로젝트',
+    period: '2025 AIoT 창의적 공학 설계',
+    situation: 'AIoT 창의적 공학 설계 수업에서 소프트웨어와 하드웨어를 융합한 프로젝트를 진행. 로봇팔이 물체를 실시간으로 인식하고 잡는 기능이 필요했다.',
     task: '카메라로 물체를 실시간 감지하여 로봇팔의 움직임을 제어하는 시스템 구현',
     action: [
       'YOLO 기반 Object Detection 모델을 적용하여 실시간 물체 인식 구현',

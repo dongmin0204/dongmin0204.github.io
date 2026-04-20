@@ -98,10 +98,10 @@ export const experiences: Experience[] = [
   },
   {
     id: 'aiot-festival',
-    year: '2024',
-    period: '2024',
+    year: '2025',
+    period: '2025',
     title: '참가자',
-    organization: '공학 페스티벌',
+    organization: 'AIoT 창의적 공학 설계',
     description: '로봇팔 Object Detection 시스템 개발',
     techStack: ['Python', 'YOLO'],
     bullets: [
